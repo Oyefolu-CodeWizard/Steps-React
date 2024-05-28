@@ -9,7 +9,6 @@ const messages = [
 export default function App() {
   const [step, setStep] = useState(1);
   const [isOpen, setIsOpen] = useState(true);
-  // const [test, setTest] = useState({ name: "Toyyib" });
 
   function handlePrevious() {
     if (step > 1) setStep((s) => s - 1);
@@ -17,10 +16,6 @@ export default function App() {
 
   function handleNext() {
     if (step < 3) setStep((s) => s + 1);
-
-    // BAD PRACTICE
-    // test.name = "Fred";
-    // setTest({ name: "Fred" });
   }
 
   return (
@@ -39,7 +34,6 @@ export default function App() {
 
           <div className="message">
             Step {step}: {messages[step - 1]}
-            {/* {test.name} */}
           </div>
 
           <div className="buttons">
